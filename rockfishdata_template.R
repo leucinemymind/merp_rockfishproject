@@ -1,8 +1,9 @@
-### rockfish data (NOT REAL) ###
+### rockfish data ###
 
 # load in csv
 library(tidyverse)
-rockfish_data <- read_csv("~/Dropbox/merp_rockfishproject/rockfishdata_template.csv")
+library(readr)
+emery_fishlog <- read_csv("Downloads/Emeryville_fish_log - Sheet1.csv")
 
-
-
+ggplot(emery_fishlog, aes(x = emery_fishlog$Location, y = emery_fishlog$MP_Stomach,
+                      )) + geom_boxplot()
