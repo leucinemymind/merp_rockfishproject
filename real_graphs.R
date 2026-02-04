@@ -16,16 +16,22 @@ graphs(sample_log$Location, "Location")
 # vs species
 graphs(sample_log$Species_ID, "Species")
 
+# regular shapiro test
+shapiro.test(sample_log$MP_Stomach)
+
+# shapiro on residuals
+# shapiro.test(locaov$residuals)
+# shapiro.test(speciesaov$residuals)
+
 # anova
-locaov <- aov(MP_Stomach ~ Location, data = sample_log)
-speciesaov <- aov(MP_Stomach ~ Species_ID, data = sample_log)
-summary(locaov)
-summary(speciesaov)
+# locaov <- aov(MP_Stomach ~ Location, data = sample_log)
+# speciesaov <- aov(MP_Stomach ~ Species_ID, data = sample_log)
+# summary(locaov)
+# summary(speciesaov)
 
-shapiro.test(locaov$residuals)
-shapiro.test(speciesaov$residuals)
+# TukeyHSD(locaov)
+# TukeyHSD(speciesaov)
 
-TukeyHSD(locaov)
-TukeyHSD(speciesaov)
-
-
+# kruskal wallis test
+kruskal.test(MP_Stomach ~ Location, data = sample_log)
+kruskal.test(MP_Stomach ~ Species_ID, data = sample_log)
