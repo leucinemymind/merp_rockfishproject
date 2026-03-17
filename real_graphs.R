@@ -1,13 +1,13 @@
 # pkgs and imports
 library(tidyverse)
 library(readr)
-sample_log <- read_csv("sample_log.csv")
+sample_log <- read_csv("~/Dropbox/merp_rockfishproject/sample_log.csv")
 
 graphs <- function(x_value, text){
                    ggplot(sample_log, aes(x = x_value, y = MP_Stomach)) +
                      geom_boxplot(fill = "skyblue") +
                      geom_jitter(width = 0.1, alpha = 0.5) +
-                     labs(title = paste("Microplastic concentration vs.", text), x = text, y = "microplastics") +
+                     labs(title = paste("Microplastic concentration vs.", text), x = text, y = "microplastic count per stomach") +
                      theme_minimal()
   }
 
