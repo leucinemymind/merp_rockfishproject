@@ -4,10 +4,10 @@ entry,species_ID,picture,length_cm,mass_g,date,date_caught,location,mp_per_stoma
 6,Yellowtail,no,33,19.18,9/27/25,9/13,ML,1,
 7,Brown,no,36,16.24,9/27/25,9/13,ML,14,
 8,Canary,no,37,11.92,9/27/25,9/13,ML,1,
-9,Brown,no,32.5,,9/27/25,8/23,ML,not used,
+9,Brown,no,32.5,,9/27/25,8/23,ML,,
 10,Brown,no,32,5.12,9/27/25,9/13,ML,1,
 11,Canary,no,41,16.05,9/27/25,9/13,ML,1,
-,Brown,no,33,,9/27/25,9/13,ML,not used,
+,Brown,no,33,,9/27/25,9/13,ML,,
 13,Yellowtail,no,32,12,9/27/25,9/13,ML,0,0
 14,Canary,no,38,,9/27/25,9/13,ML,,Tissue taken
 15,Yellowtail,no,31,15.07,9/27/25,9/13,ML,2,Tissue taken
@@ -38,7 +38,7 @@ entry,species_ID,picture,length_cm,mass_g,date,date_caught,location,mp_per_stoma
 39,Blue,,29,10.74,9/27/25,8/18,SC,3,
 40,Yellowtail,,31.5,,9/27/25,8/30,SC,,
 41,Black,,32,5.56,9/27/25,8/30,SC,0,
-42,Vermillion,,32,7.52,9/27/25,8/30,SC,1 microfiber,
+42,Vermillion,,32,7.52,9/27/25,8/30,SC,1,
 43,Black,,31.5,3.37,9/27/25,8/1,SC,2,
 44,Yellowtail,,37,10.82,9/27/25,8/18,SC,7,
 45,Black,,29.5,6.72,9/27/25,8/1,SC,0,
@@ -50,7 +50,7 @@ entry,species_ID,picture,length_cm,mass_g,date,date_caught,location,mp_per_stoma
 51,Canary,,32,4.1,9/27/25,8/17,EV ,1,
 52,Blue,,23.5,,9/27/25,8/17,EV ,,
 53,Blue,,28.5,5.06,9/27/25,8/17,EV ,3,
-54,Brown,,31.5,,9/27/25,8/17,EV ,null due to state of stomach,
+54,Brown,,31.5,,9/27/25,8/17,EV ,,
 55,Blue,,31,15.41,9/27/25,8/17,EV ,0,found undigested shrimp
 56,Black,,36.5,,9/27/25,8/23,EV ,,
 57,China,,30,9.62,9/27/25,8/23,EV ,1,
@@ -62,7 +62,7 @@ entry,species_ID,picture,length_cm,mass_g,date,date_caught,location,mp_per_stoma
 63,Vermillion,,32.5,2.12,9/27/25,8/23,EV ,2,
 64,Black,,32,4.45,9/27/25,8/23,EV ,0,
 65,Black,,32.5,7.63,10/26/2025,8/23,EV ,5,
-66,Black,,33.5,,10/26/25,8/23,EV ,null due to state of stomach,
+66,Black,,33.5,,10/26/25,8/23,EV ,,
 67,Canary,,31,7.57,10/26/25,8/17,EV ,9,
 68,Blue,,33.5,13.73,10/26/25,8/17,EV,6,
 69,Vermillion,,29,,10/26/25,8/17,EV,,
@@ -75,7 +75,7 @@ entry,species_ID,picture,length_cm,mass_g,date,date_caught,location,mp_per_stoma
 76,Vermillion,,29.5,5.33,10/26/25,8/1,EV ,10,
 77,Black,,33,4.45,10/26/25,8/23,EV,0,
 78,Gopher,,26,,10/26/25,8/23,EV,,
-79,Gopher,,25,3.35,10/26/25,8/23,EV,null due to state of stomach ,
+79,Gopher,,25,3.35,10/26/25,8/23,EV,,
 80,China,,34,,10/26/25,8/23,EV ,,
 81,China,,33.5,6.69,10/26/25,8/23,EV,39,
 82,Yellowtail,,35.5,4.94,10/26/25,8/23,EV,5,
