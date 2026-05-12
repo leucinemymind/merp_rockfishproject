@@ -24,4 +24,5 @@ aov_loc <- aov(mp_per_stomach ~ location, data = test)
 shapiro.test(residuals(model))
 
 kruskal.test(mp_per_stomach ~ location, data = test)
+
 kruskal.test(mp_per_stomach ~ species_ID, data = test)
