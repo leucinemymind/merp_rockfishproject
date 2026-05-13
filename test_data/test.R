@@ -13,7 +13,6 @@ graph_boxplot <- function(x_value, text){
 graph_scatter <- function(x_value, text){
   ggplot(data = test, mapping = aes(x = {{ x_value }}, y = mp_per_stomach)) +
     geom_point(fill = "skyblue")+
-    geom_smooth(method=lm) + 
     labs(title = paste("Microplastic concentration vs.", text), x = text, y = "microplastic count per stomach") +
     theme_minimal()
 }
@@ -38,3 +37,8 @@ shapiro.test(residuals(model))
 kruskal.test(mp_per_stomach ~ location, data = test)
 
 kruskal.test(mp_per_stomach ~ species_ID, data = test)
+
+
+# linear models
+summary(lm(test$mp_per_stomach ~ test$mass_g))
+summary(lm(test$mp_per_stomach ~ test$length_cm))
