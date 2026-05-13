@@ -2,7 +2,7 @@ library(tidyverse)
 library(readr)
 test <- read_csv("Dropbox/merp_rockfishproject/test_data/test.csv")
 
-graphs <- function(x_value, text){
+graph_boxplot <- function(x_value, text){
   ggplot(test, aes(x = {{ x_value }}, y = mp_per_stomach)) +
     geom_boxplot(fill = "skyblue") +
     geom_jitter(width = 0.1, alpha = 0.5) +
@@ -10,11 +10,23 @@ graphs <- function(x_value, text){
     theme_minimal()
 }
 
+graph_scatter <- function(x_value, text){
+  ggplot(data = test, mapping = aes(x = {{ x_value }}, y = mp_per_stomach)) +
+    geom_point(fill = "skyblue")+
+    geom_smooth(method=lm) + 
+    labs(title = paste("Microplastic concentration vs.", text), x = text, y = "microplastic count per stomach") +
+    theme_minimal()
+}
 
 # mp stomach vs location
-graphs(test$location, "Location")
+graph_boxplot(test$location, "Location")
 # vs species
-graphs(test$species_ID, "Species")
+graph_boxplot(test$species_ID, "Species")
+
+# correlations??? or not. with mass
+graph_scatter(test$mass_g, "Mass (g)")
+#with length
+graph_scatter(test$length_cm, "Length (cm)")
 
 #tests tests tests
 
