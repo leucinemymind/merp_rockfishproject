@@ -1,7 +1,7 @@
 # pkgs and imports
 library(tidyverse)
 library(readr)
-sample_log <- read_csv("~/Dropbox/merp_rockfishproject/test_data/no_gopher.csv")
+sample_log <- read_csv("~/Dropbox/merp_rockfishproject/test_data/by_RUCC.csv")
 
 graphs <- function(x_value, text){
   ggplot(sample_log, aes(x = x_value, y = mp_per_stomach)) +
@@ -35,3 +35,5 @@ shapiro.test(sample_log$mp_per_stomach)
 # kruskal wallis test
 kruskal.test(mp_per_stomach ~ location, data = sample_log)
 kruskal.test(mp_per_stomach ~ species_ID, data = sample_log)
+
+t.test(mp_per_stomach ~ location, data = sample_log)
