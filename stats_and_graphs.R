@@ -4,7 +4,7 @@ library(readr)
 sample_log <- read_csv("~/Dropbox/merp_rockfishproject/sample_log.csv")
 
 graphs <- function(x_value, text){
-                   ggplot(sample_log, aes(x = x_value, y = MP_Stomach)) +
+                   ggplot(sample_log, aes(x = x_value, y = mp_per_stomach)) +
                      geom_boxplot(fill = "skyblue") +
                      geom_jitter(width = 0.1, alpha = 0.5) +
                      labs(title = paste("Microplastic concentration vs.", text), x = text, y = "microplastic count per stomach") +
@@ -12,12 +12,12 @@ graphs <- function(x_value, text){
   }
 
 # mp stomach vs location
-graphs(sample_log$Location, "Location")
+graphs(sample_log$location, "Location")
 # vs species
-graphs(sample_log$Species_ID, "Species")
+graphs(sample_log$species_ID, "Species")
 
 # regular shapiro test
-shapiro.test(sample_log$MP_Stomach)
+shapiro.test(sample_log$mp_per_stomach)
 
 # shapiro on residuals
 # shapiro.test(locaov$residuals)
@@ -33,5 +33,5 @@ shapiro.test(sample_log$MP_Stomach)
 # TukeyHSD(speciesaov)
 
 # kruskal wallis test
-kruskal.test(MP_Stomach ~ Location, data = sample_log)
-kruskal.test(MP_Stomach ~ Species_ID, data = sample_log)
+kruskal.test(mp_per_stomach ~ location, data = sample_log)
+kruskal.test(mp_per_stomach ~ species_ID, data = sample_log)
