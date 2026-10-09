@@ -5,7 +5,7 @@ sample_log <- read_csv("~/Dropbox/merp_rockfishproject/sample_log.csv")
 
 graphs <- function(x_value, text){
                    ggplot(sample_log, aes(x = x_value, y = mp_per_stomach)) +
-                     geom_boxplot(fill = "skyblue") +
+                     geom_boxplot(fill = "slateblue") +
                      geom_jitter(width = 0.1, alpha = 0.5) +
                      labs(title = paste("Microplastic concentration vs.", text), x = text, y = "microplastic count per stomach") +
                      theme_minimal()
@@ -18,6 +18,10 @@ graphs(sample_log$species_ID, "Species")
 
 # regular shapiro test
 shapiro.test(sample_log$mp_per_stomach)
+
+# freq comparison
+
+barplot(c(17.80, 86.20), names.arg = c("MERP lab", "Laundry et al."), horiz = TRUE, main = 'Plastic consumption comparison (Laundry et al.)', xlab = 'Plastic consumption rate (%)', col = 'slateblue')
 
 # shapiro on residuals
 # shapiro.test(locaov$residuals)
